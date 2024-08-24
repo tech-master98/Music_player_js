@@ -1,0 +1,304 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right,#9a1d1d, #6100fe);
+    font-weight: bold;
+    }
+    
+
+
+    @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+
+
+
+    html, body{
+        height: 115%;
+        font-weight: 800;
+        margin: 40;
+        padding: 0;
+      }
+svg {
+   
+    display: block;
+    font: 5.5em 'Modern music player';
+    width: 600px;
+    height: 200px;
+    margin: 0 auto;
+   
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+  stroke: #c30a8e;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+  stroke: #840037;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+  stroke: #BD0034;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+  stroke: #f58a08;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+  stroke: #e70404;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
+}
+    
+
+    
+
+
+
+
+
+    
+  
+    .player{
+      height: 110vh;
+     
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+   
+    
+  }
+
+
+
+
+
+
+
+
+   
+  .wrapper{
+      
+    width: 110vh;
+  border: 1px solid transparent;
+  padding: 4px;
+  border-radius: 20px;
+  background-color:linear-gradient(to left,#9a1d86, #ed6503);
+
+
+   
+
+  box-shadow: rgba(1.8, 1.7, 1.5, 1.4) 30px 1px 42px, rgba(1.9, 1.9, 1.9, 1.24) 30px 1px 42px;
+}
+
+  
+    
+    .details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    }
+    
+    .track-art {
+    margin: 30px;
+    height: 250px;
+    width: 250px;
+    border:4px solid #9a1d86;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    -moz-box-shadow: 0px 6px 5px black;
+    -webkit-box-shadow: 0px 6px 5px black;
+    box-shadow: 0px 6px 10px rgba(0, 1.2, 1, 1.868);
+    -moz-border-radius:190px;
+    -webkit-border-radius:190px;
+    border-radius:190px;
+    }
+    
+    .now-playing {
+    font-size: 1rem;
+    }
+    
+    .track-name {
+    font-size: 2.5rem;
+    }
+    
+    .track-artist {
+    margin-top: 6px;
+    font-size: 1.5rem;
+    }
+    
+    .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 60px;
+    margin-left: 167px ;
+    }
+    .active{
+        color: rgb(0, 0, 0);
+    }
+    
+    .repeat-track,
+    .random-track,
+    .playpause-track,
+    .prev-track,
+    .next-track {
+    padding: 30px;
+    opacity: 0.8;
+    transition: opacity .2s;
+    }
+    
+    .repeat-track:hover,
+    .random-track:hover,
+    .playpause-track:hover,
+    .prev-track:hover,
+    .next-track:hover {
+    opacity: 1.0;
+    }
+    
+    .slider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: linear-gradient(to right,#9a1d86, #1595be);
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    }
+    
+    .seek_slider::-webkit-slider-thumb,
+    .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #1226bc;
+    border: 4px solid #ff0000;
+    cursor: grab;
+    border-radius: 100%;
+    }
+    
+    .seek_slider:hover,
+    .volume_slider:hover {
+    opacity: 1.0;
+    }
+    
+    .seek_slider {
+    width: 60%;
+    }
+    
+    .volume_slider {
+    width: 30%;
+    }
+    
+    .current-time,
+    .total-duration {
+    padding: 10px;
+    }
+    
+    i.fa-volume-down,
+    i.fa-volume-up {
+    padding: 10px;
+    }
+    
+    i,
+    i.fa-play-circle,
+    i.fa-pause-circle,
+    i.fa-step-forward,
+    i.fa-step-backward,
+    p {
+    cursor: pointer;
+    }
+    .randomActive{
+        color: black;
+    }
+    .rotate {
+        animation: rotation 8s infinite linear;
+    }
+    @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+    }
+    .loader {
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+    }
+    .loader .stroke{
+        background: #003cff;
+        height: 150%;
+        width: 15px;
+        border-radius: 30px;
+        margin: 0 15px;
+        margin-bottom: 60px;
+        margin-left: 20px;
+        animation: animate 1.4s linear infinite;
+    }
+      @keyframes animate {
+        50% {
+          height: 30%;
+          background: linear-gradient(#9a1d86, #3cbe15);
+        }
+    
+        100% {
+          background: linear-gradient(#9a1d1d, #1595be);
+          height: 100%;
+        }
+      }
+      .stroke:nth-child(1){
+          animation-delay: 0s;
+      }
+      .stroke:nth-child(2){
+        animation-delay: 0.3s;
+    }
+    .stroke:nth-child(3){
+        animation-delay: 0.6s;
+    }
+    .stroke:nth-child(4){
+        animation-delay: 0.9s;
+    }
+    .stroke:nth-child(5){
+        animation-delay: 0.6s;
+    }
+    .stroke:nth-child(6){
+        animation-delay: 0.3s;
+    }
+    .stroke:nth-child(7){
+        animation-delay: 0s;
+    }
+    
+
+
+    
